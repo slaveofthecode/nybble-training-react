@@ -1,15 +1,81 @@
-# React + TypeScript + Vite
+# Nybble Training React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repository with the code related to the training get from the company:
 
-Currently, two official plugins are available:
+## Main stack tech
+- [React](https://react.dev/) 
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Other technologies, libraries and framework just to shown different examples
 
-## Expanding the ESLint configuration
+- [styled-components](https://styled-components.com)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+<br>
+
+---
+---
+
+<br>
+
+# Some utils sentences that were used 
+### Git `2.33.1` and its code related to the 'branch'
+```git
+git --version
+git branch <new-branch-to-create>
+git checkout <branch-to-point>
+git branch -d <branch-to-remove>
+```
+
+### Alias in the imports
+- Install the "path" library
+```
+npm install path
+```
+- Go to the 'vite.config.ts' file
+```ts
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@pages": path.resolve(__dirname, "./src/pages"),
+      "@layouts": path.resolve(__dirname, "./src/layouts"),
+    },
+  },
+});
+```
+- Go to the "tsconfig.app.json" file
+```ts
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@layouts/*": ["./src/layouts/*"],
+    }
+```
+
+<br>
+
+---
+---
+
+<br>
+
+# Different configurations or settings own of the project:
+
+
+
+
+
+
+
 
 - Configure the top-level `parserOptions` property like this:
 
